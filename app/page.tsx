@@ -3,8 +3,20 @@ import Counter from "./Counter";
 import Link from "next/link";
 
 export default function Home() {
+  const postIds = [1, 2, 3];
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <div>
+        <h1>記事一覧</h1>
+        <ul>
+          {postIds.map((id) => (
+            <li key={id}>
+              <Link href={`/POST/${id}`}>記事 {id} を読む</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    
       <Link href="/about">Aboutページへ移動</Link>
       <Counter />
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
