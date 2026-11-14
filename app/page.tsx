@@ -11,7 +11,7 @@ export default function Home() {
         <ul>
           {postIds.map((id) => (
             <li key={id}>
-              <Link href={`/POST/${id}`}>記事 {id} を読む</Link>
+              <Link href={`/post/${id}`}>記事 {id} を読む</Link>
             </li>
           ))}
         </ul>
