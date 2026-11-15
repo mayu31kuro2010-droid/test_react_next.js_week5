@@ -1,0 +1,107 @@
+/* app/page.module.css */
+.page {
+  --gray-alpha-200: rgba(255, 255, 255, 0.145);
+  --gray-alpha-100: rgba(255, 255, 255, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 32px;
+  gap: 32px;
+  font-family: var(--font-geist-sans);
+  
+  /* 中央の光のグラデーション */
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%),
+    #0a0a0a;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 80px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; /* 横に広がりすぎないように制限 */
+}
+
+.logo {
+  filter: invert(1);
+}
+
+.ctas {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .ctas {
+    flex-direction: row;
+  }
+}
+
+.primary {
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #0a0a0a;
+  gap: 8px;
+  font-size: 14px;
+  height: 40px;
+  padding: 0 16px;
+  font-weight: 600;
+}
+
+.primary:hover {
+  background: #e6e6e6;
+}
+
+@media (min-width: 640px) {
+  .primary {
+    font-size: 16px;
+    height: 48px;
+    padding: 0 20px;
+  }
+}
+
+.secondary {
+  border-radius: 9999px;
+  border: 1px solid var(--gray-alpha-200);
+  transition: background-color 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  height: 40px;
+  padding: 0 16px;
+  color: #ffffff;
+}
+
+.secondary:hover {
+  background: var(--gray-alpha-100);
+  border-color: transparent;
+}
+
+@media (min-width: 640px) {
+  .secondary {
+    font-size: 16px;
+    height: 48px;
+    padding: 0 20px;
+    min-width: 176px;
+  }
+}
